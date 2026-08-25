@@ -65,7 +65,21 @@ def _run_with_graph(fn):
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok"})
-
+  
+@app.route("/", methods=["GET"])
+def home():
+    return """
+    <html><body style="font-family: sans-serif; max-width: 600px; margin: 60px auto;">
+      <h2>🟢 Dropshipping Email Agent — Live</h2>
+      <p>LangGraph agent deployed and running on Vercel.</p>
+      <ul>
+        <li><code>GET /api/health</code> — liveness check</li>
+        <li><code>POST /api/process</code> — run an email through the graph</li>
+        <li><code>POST /api/resume</code> — resume an escalated run</li>
+      </ul>
+      <p>See the <a href="https://github.com/faiqa-anwar/Dropshipping-email-agent">GitHub repo</a> for details.</p>
+    </body></html>
+    """
 
 @app.route("/api/process", methods=["POST"])
 def process_email():
