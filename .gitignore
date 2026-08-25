@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.env
+credentials.json
+token.json
+token_*.json
+dropship_agent.db

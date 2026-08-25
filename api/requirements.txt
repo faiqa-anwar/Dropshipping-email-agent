@@ -1,0 +1,8 @@
+flask
+python-dotenv
+langgraph>=1.2
+langgraph-checkpoint-postgres
+psycopg[binary]
+langchain-openai
+supabase
+openpyxl
