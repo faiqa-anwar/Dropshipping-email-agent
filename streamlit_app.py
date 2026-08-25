@@ -1,7 +1,9 @@
 import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
-
+import os
+st.write("Key detected:", bool(os.environ.get("OPENROUTER_API_KEY")))
+st.write("Key prefix:", os.environ.get("OPENROUTER_API_KEY", "")[:8])
 from agent_app.graph.graph import graph
 from langgraph.types import Command
 from run_demo import SAMPLE_EMAILS
