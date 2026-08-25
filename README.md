@@ -192,10 +192,3 @@ Set `OPENROUTER_API_KEY` (and optionally `OPENROUTER_MODEL`, e.g.
 5. **Real refund execution**: `handle` currently just prints "issuing
    refund" — call Shopify's actual refund API in `send_and_log`.
 
-## What's deliberately left simple (extend as needed)
-
-- Attachment/photo handling for damaged-item complaints
-- Thread continuity across multiple emails from the same customer
-- SLA/timeout tracking on unanswered escalations
-- Rate limiting / retry logic on LLM and external API calls
-- Real refund execution (currently prints "issuing refund" - wire up Shopify's real refund API)
